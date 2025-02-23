@@ -3,6 +3,10 @@ from PIL import Image
 import requests
 from io import BytesIO
 import base64
+import sys
+
+if sys.version_info < (3, 10) or sys.version_info >= (3, 11):
+    raise RuntimeError("Python 3.10.x required")
 
 app = Flask(__name__)
 
